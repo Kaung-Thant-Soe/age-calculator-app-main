@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+</head>
+<body>
+
+  <div class="card-container">
+
+    <section class="birth-date">
+      <div class="birth day ">
+        <label for="Day">Day</label>
+        <input type="datetime" name="day" class="date birth-day" placeholder="DD">
+        <p class="hidden">This field is required</p>
+      </div>
+
+      <div class="birth month">
+        <label for="Month">Month</label>
+        <input type="datetime" name="month" class="date birth-month" placeholder="MM">
+        <p class="hidden">This field is required</p>
+      </div>
+
+      <div class="birth year">
+        <label for="Year">Year</label>
+        <input type="datetime" name="year" class="date birth-year" placeholder="YYYY">
+        <p class="hidden">This field is required</p>
+      </div>
+    </section>
+
+    <section class="arrow-image">
+        <hr>
+        <span class="arrow-icon">
+          <img src="./assets/images/icon-arrow.svg" alt="arrow" class="arrow-decorator">
+        </span>
+    </section>
+
+    <section class="exact-age">
+      <div class="age ">
+        <span class="number exact-year">--</span>
+        <span class="data ">years</span>
+      </div>
+
+      <div class="age result-month">
+        <span class="number exact-month">--</span>
+        <span class="data ">months</span>
+      </div>
+
+      <div class="age result-day">
+        <span class="number exact-day">--</span>
+        <span class="data ">days</span>
+      </div>
+    </section>
+
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Kaung-Thant-Soe</a>.
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

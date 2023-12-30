@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* dark mode user-agent-styles */
+
+html {
+    color-scheme: dark light;
+    user-select: none;
+}
+
+/* min body height */
+
+body {
+    min-height: 100vh;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+:root {
+    --primary-purple: hsl(259, 100%, 65%);
+    --primary-light-red: hsl(0, 100%, 67%);
+    --neutral-normal-white: hsl(0, 0%, 100%);
+    --neutral-off-white: hsl(0, 0%, 94%);
+    --neutral-light-grey: hsl(0, 0%, 86%);
+    --neutral-smokey-grey: hsl(0, 1%, 44%);
+    --neutral-off-black: hsl(0, 0%, 8%);
+}
+
+body {
+    min-width: 375px;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--neutral-off-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+}
+.card-container {
+    width: 95%;
+    background-color: var(--neutral-normal-white);
+    border-radius: 20px 20px 110px 20px;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+/* .invalid{
+    border:1px solid var(--primary-light-red) ;
+    color: var(--primary-light-red) ;
+} */
+.birth-date {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+.birth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.birth label {
+    color: var(--neutral-smokey-grey);
+    padding: 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    border: none;
+}
+
+.date {
+    background-color: var(--neutral-normal-white);
+    border: 1px solid var(--neutral-smokey-grey);
+    width: 6rem;
+    height: 4rem;
+    text-align: center;
+    font-size: 23px;
+    color: var(--neutral-off-black);
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+}
+.date:focus {
+    background-color: var(--neutral-normal-white);
+    border: 1px solid var(--neutral-smokey-grey);
+}
+
+.arrow-decorator {
+    transform: translate(56%, 55%);
+    width: 30px;
+}
+.arrow-image {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.arrow-icon {
+    display: block;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: var(--primary-purple);
+    /* transform: translate(135%, -48%); */
+    z-index: 1;
+    cursor: pointer;
+    user-select: none;
+}
+.arrow-icon:hover {
+    background-color: var(--neutral-off-black);
+}
+hr {
+    border: 0.3px solid var(--neutral-light-grey);
+    width: 100%;
+    position: absolute;
+    bottom: 50%;
+}
+.exact-age {
+    font-size: 32px;
+}
+.number {
+    color: var(--primary-purple);
+    font-size: 32px;
+    font-weight: 800;
+    font-style: italic;
+}
+.data {
+    color: var(--neutral-off-black);
+    font-weight: 800;
+    font-style: italic;
+    font-size: 32px;
+}
+.result-month {
+    margin-left: 20px;
+}
+.result-day {
+    margin-left: 50px;
+}
+
+p {
+    color: var(--primary-light-red);
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: 400;
+    font-style: italic;
+}
+.hidden {
+    display: none;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--neutral-smokey-grey);
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+@media screen and (min-width: 1100px) {
+    .card-container {
+        width: 50%;
+        height: 70%;
+        padding: 45px;
+        gap: 45px;
+    }
+    .birth-date {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        gap: 30px;
+    }
+    .date {
+        width: 8rem;
+        text-align: left;
+        padding-left: 10px;
+    }
+    .arrow-image {
+        display: flex;
+        flex-direction: row;
+    }
+    hr {
+        width: 87%;
+    }
+    .arrow-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+    }
+    .arrow-decorator {
+        width: 40px;
+        transform: translate(52%, 48%);
+    }
+    .number,
+    .data {
+        font-size: 55px;
+        font-weight: 800;
+    }
+    .data {
+        margin-left: 10px;
+    }
+}
